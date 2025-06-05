@@ -1,8 +1,20 @@
+body {
+  margin: 0;
+  font-family: 'e-Ukraine', sans-serif;
+  font-weight: 400; /* fallback to 'normal' if not available */
+  background-color: #ffffff;
+  color: #333;
+}
+
+h1, h2, h3, h4, h5, h6, .nav-logo {
+  font-family: 'e-Ukraine Head', sans-serif;
+  font-weight: bold;
+}
+
 /* Navigation Bar */
 .navbar {
   width: 100%;
-  padding: 20px 40px;
-  box-sizing: border-box;
+  padding: 2px 4px;
   background-color: white;
   border-bottom: 1px solid #ddd;
   display: flex;
@@ -14,77 +26,61 @@
 }
 
 .nav-logo {
-  font-size: 1.5rem;
-  font-weight: bold;
+  font-size: 1.7rem;
+  font-weight: 700;
   color: #0057B7;
 }
 
+.nav-links {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+
 .nav-links a {
-  margin-left: 20px;
+  margin: 0 15px;
   text-decoration: none;
   color: #333;
   font-weight: 500;
   font-size: 1rem;
+  transition: color 0.3s;
 }
 
 .nav-links a:hover {
-  text-decoration: underline;
+  color: #0057B7;
 }
 
-/* Adjust hero layout to fit under nav */
-.container {
-  padding-top: 80px; /* push content under fixed navbar */
-}
-
-/* Placeholder page content */
-.students-content {
-  padding: 150px 40px;
-  text-align: center;
-}
-
-body {
-  margin: 0;
-  font-family: 'Arial', sans-serif;
-  scroll-behavior: smooth;
-
+/* Hero Section */
 .container {
   display: flex;
   height: 100vh;
+  padding-top: 60px;
   position: relative;
+  box-sizing: border-box;
 }
 
 .left {
   width: 50%;
-  background-color: white;
   padding: 60px;
-  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
 }
 
 .right {
   width: 50%;
-  background-image: url('hero.png');
+  background-image: url('/images/hero.png');
   background-size: cover;
   background-position: center;
 }
 
-h1 {
-  font-size: 2.8rem;
-  line-height: 1.4;
-  color: black;
-  margin: 40px 0;
-}
-
 .flag-circle {
-  width: 150px;
-  height: 150px;
+  width: 140px;
+  height: 140px;
   border-radius: 50%;
   overflow: hidden;
-  margin-bottom: 20px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .half {
@@ -100,18 +96,24 @@ h1 {
   background-color: #FFD700;
 }
 
+h1 {
+  font-size: 2.8rem;
+  line-height: 1.4;
+  margin: 40px 0;
+}
+
 .join-button {
-  background-color: #e0e0e0;
-  color: #000;
+  background-color: #0057B7;
+  color: white;
   padding: 15px 30px;
   font-size: 1.2rem;
-  text-decoration: none;
   border-radius: 10px;
-  transition: background 0.3s ease;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
 }
 
 .join-button:hover {
-  background-color: #d4d4d4;
+  background-color: #003e8a;
 }
 
 .scroll-arrow {
@@ -120,9 +122,9 @@ h1 {
   left: 50%;
   transform: translateX(-50%);
   font-size: 2rem;
-  text-decoration: none;
   color: gray;
   animation: bounce 2s infinite;
+  text-decoration: none;
 }
 
 @keyframes bounce {
@@ -137,6 +139,7 @@ h1 {
   }
 }
 
+/* About Section */
 .about-section {
   padding: 100px 20px;
   background-color: #f9f9f9;
@@ -155,8 +158,7 @@ h1 {
   line-height: 1.6;
 }
 
-
-/* === STATISTICS SECTION === */
+/* Statistics Section */
 .stats-section {
   background-color: #ffffff;
   padding: 80px 40px;
@@ -173,10 +175,10 @@ h1 {
   padding: 40px 30px;
   width: 220px;
   font-size: 1.2rem;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
 }
 
-/* === FOUNDERS SECTION === */
+/* Founders Section */
 .founders-section {
   padding: 80px 40px;
   background-color: #fafafa;
@@ -196,7 +198,7 @@ h1 {
   padding: 20px;
   border-radius: 12px;
   width: 300px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -206,6 +208,8 @@ h1 {
   width: 150px;
   height: 150px;
   background-color: #ddd;
+  background-size: cover;
+  background-position: center;
   border-radius: 50%;
   margin-bottom: 20px;
   display: flex;
@@ -219,5 +223,28 @@ h1 {
   font-size: 1rem;
   color: #333;
   text-align: center;
+  font-family: 'e-Ukraine', sans-serif;
 }
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .left, .right {
+    width: 100%;
+    padding: 40px 20px;
+  }
+
+  .right {
+    height: 300px;
+  }
+
+  .nav-links {
+    position: static;
+    transform: none;
+    justify-content: center;
+    width: 100%;
+  }
 }

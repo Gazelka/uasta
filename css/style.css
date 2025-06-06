@@ -247,7 +247,7 @@ h1 {
     justify-content: center;
     width: 100%;
   }
-  /* FAQ Section */
+/* FAQ Section */
 .faq-section {
   background-color: #f9f9f9;
   padding: 80px 20px;
@@ -283,34 +283,47 @@ h1 {
 
 .faq-answer {
   padding: 0 15px 15px 15px;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease-out;
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.faq-answer.visible {
+  display: block;
+  opacity: 1;
 }
 
 /* Contact Section */
 .contact-section {
-  background-color: #eaf1ff;
-  padding: 60px 20px;
-  text-align: center;
+  background-color: #f1f1f1;
+  padding: 20px 30px;
+  margin-top: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
-.contact-box {
-  background-color: white;
-  padding: 30px;
-  max-width: 500px;
-  margin: 0 auto;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+.contact-section h4 {
+  margin-right: 20px;
+  font-size: 18px;
+  color: #333;
 }
 
-.contact-box a {
-  color: #0057B7;
+.contact-info {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.contact-info p {
+  margin: 0;
+  font-size: 16px;
+}
+
+.contact-info a {
+  color: #0066cc;
   text-decoration: none;
-}
-
-.contact-box a:hover {
-  text-decoration: underline;
 }
 
 }

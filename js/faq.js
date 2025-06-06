@@ -6,21 +6,15 @@ document.addEventListener('DOMContentLoaded', () => {
     button.addEventListener('click', () => {
       const answer = button.nextElementSibling;
 
-      // Close other answers if open
-      questions.forEach(btn => {
-        if (btn !== button) {
-          btn.classList.remove('active');
-          btn.nextElementSibling.style.maxHeight = null;
+      // Close all other answers
+      document.querySelectorAll('.faq-answer').forEach(el => {
+        if (el !== answer) {
+          el.classList.remove('visible');
         }
       });
 
-      // Toggle current answer
-      button.classList.toggle('active');
-      if (answer.style.maxHeight) {
-        answer.style.maxHeight = null;
-      } else {
-        answer.style.maxHeight = answer.scrollHeight + "px";
-      }
+      // Toggle current one
+      answer.classList.toggle('visible');
     });
   });
 });

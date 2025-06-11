@@ -295,30 +295,17 @@ h1 {
 
 /* Contact Section */
 /* Make the body take full height and use flexbox */
-body, html {
+.contact-section{
+  position: fixed;
+  bottom: 0;
+  left: 0;
   height: 100%;
   margin: 0;
-}
-
-body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
 }
 
 /* The main content should grow to fill available space */
 .page-content {
   flex: 1;
 }
-
-/* Footer styles */
-.contact-section {
-  background-color: #222; /* or your preferred bg */
-  color: #eee;
-  text-align: center;
-  padding: 15px 10px;
-  font-size: 0.9em;
-}
-
 
 }

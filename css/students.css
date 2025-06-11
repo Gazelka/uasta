@@ -152,3 +152,17 @@
   background-color: #e0ecf6;
   transition: background-color 0.2s;
 }
+
+.hidden {
+  display: none;
+}
+
+.tutoring-details {
+  margin-top: 15px;
+  background-color: #e8f8ec;
+  padding: 15px;
+  border-radius: 8px;
+  font-size: 0.95em;
+  color: #333;
+}
+

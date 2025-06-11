@@ -294,36 +294,31 @@ h1 {
 }
 
 /* Contact Section */
-.contact-section {
-  background-color: #f1f1f1;
-  padding: 20px 30px;
-  margin-top: 80px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.contact-section h4 {
-  margin-right: 20px;
-  font-size: 18px;
-  color: #333;
-}
-
-.contact-info {
-  display: flex;
-  gap: 20px;
-  align-items: center;
-}
-
-.contact-info p {
+/* Make the body take full height and use flexbox */
+body, html {
+  height: 100%;
   margin: 0;
-  font-size: 16px;
 }
 
-.contact-info a {
-  color: #0066cc;
-  text-decoration: none;
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
+
+/* The main content should grow to fill available space */
+.page-content {
+  flex: 1;
+}
+
+/* Footer styles */
+.contact-section {
+  background-color: #222; /* or your preferred bg */
+  color: #eee;
+  text-align: center;
+  padding: 15px 10px;
+  font-size: 0.9em;
+}
+
 
 }

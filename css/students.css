@@ -165,3 +165,17 @@
   font-size: 0.95em;
   color: #333;
 }
+
+.hidden {
+  display: none;
+}
+
+.peer_contacts-details {
+  margin-top: 15px;
+  background-color: #e8f8ec;
+  padding: 15px;
+  border-radius: 8px;
+  font-size: 0.95em;
+  color: #333;
+}
+

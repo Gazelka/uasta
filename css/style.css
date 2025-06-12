@@ -45,6 +45,11 @@ h1, h2, h3, h4, h5, h6, .nav-logo {
   color: #0057B7;
 }
 
+.nav-logo a {
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
 .nav-links {
   position: absolute;
   left: 50%;

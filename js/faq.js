@@ -1,20 +1,20 @@
-// js/faq.js
-document.addEventListener('DOMContentLoaded', () => {
-  const questions = document.querySelectorAll('.faq-question');
+const items = document.querySelectorAll('.accordion-item');
 
-  questions.forEach(button => {
-    button.addEventListener('click', () => {
-      const answer = button.nextElementSibling;
+items.forEach(item => {
+  const header = item.querySelector('.accordion-header');
 
-      // Close all other answers
-      document.querySelectorAll('.faq-answer').forEach(el => {
-        if (el !== answer) {
-          el.classList.remove('visible');
-        }
-      });
+  header.addEventListener('click', () => {
+    const isActive = item.classList.contains('active');
 
-      // Toggle current one
-      answer.classList.toggle('visible');
+    items.forEach(i => {
+      i.classList.remove('active');
+      i.querySelector('.icon').textContent = '+';
     });
+
+    if (!isActive) {
+      item.classList.add('active');
+      item.querySelector('.icon').textContent = '−';
+    }
   });
 });
+

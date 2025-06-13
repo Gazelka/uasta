@@ -17,4 +17,3 @@ items.forEach(item => {
     }
   });
 });
-

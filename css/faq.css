@@ -30,14 +30,15 @@ body {
 }
 
 .accordion-header .icon {
-  color: #c30045;
+  color: #0057B7;
   font-size: 1.5rem;
   font-weight: bold;
   width: 20px;
 }
 
 .accordion-body {
-  padding: 0 55px 20px;
+  width: 100%;
+  padding 0px 0px 20px
   color: #333;
   display: none;
 }

@@ -5,6 +5,13 @@ body {
   padding: 20px;
 }
 
+.reasons-section {
+  padding: 40px 20px;
+  margin-top: 80px; /* Add space below navbar */
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
 .accordion {
   max-width: 800px;
   margin: auto;
